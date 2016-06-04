@@ -61,7 +61,7 @@ public class CsharpUnityClientCodegen extends DefaultCodegen implements CodegenC
                         "Long",
                         "Float",
                         "System.IO.Stream", // not really a primitive, we include it to avoid model import
-                        "Object")
+                        "System.Object")
         );
         instantiationTypes.put("array", "List");
         instantiationTypes.put("map", "Dictionary");
@@ -80,7 +80,7 @@ public class CsharpUnityClientCodegen extends DefaultCodegen implements CodegenC
         typeMapping.put("array", "List");
         typeMapping.put("list", "List");
         typeMapping.put("map", "Dictionary");
-        typeMapping.put("object", "Object");
+        typeMapping.put("object", "System.Object");
 
         cliOptions.clear();
         cliOptions.add(new CliOption(CodegenConstants.PACKAGE_NAME, "C# package name (convention: Camel.Case).")
